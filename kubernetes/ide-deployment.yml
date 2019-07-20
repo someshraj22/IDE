@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ide
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ide
+  template:
+    metadata:
+      labels:
+        app: ide
+    spec:
+      containers:
+      - name: ide
+        image: someshraj22/newide:latest
+        ports:
+          - containerPort: 5000
+        volumeMounts:
+          - name: whoosh-volume-mount
+            mountPath: IDE/Python_IDE/whoosh
+      volumes:
+      - name: whoosh-volume-mount
+        persistentVolumeClaim:
+          claimName: whoosh-pvc
+      restartPolicy: Always
+      

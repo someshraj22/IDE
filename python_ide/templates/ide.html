@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block contents %}
+
+<form method="POST" name="ide" class="ide">
+    <label for="code">Write your code here..
+        <textarea name='code' wrap="off" class='code'>{{output[0]}}</textarea>
+    </label>
+    <input type="submit" name="run" value="Run">
+    <br>
+    <label for="output">Output
+        <textarea name='output' wrap="off" class="output">{{output[1]}}</textarea>
+    </label>
+    
+</form>
+
+
+{% endblock %}

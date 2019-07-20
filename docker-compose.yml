@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: ide:1.0
+    ports:
+      - "5000"
+    volumes:
+      - /home/galaxy/Desktop/IDE/Python_IDE:/IDE/Python_IDE
+

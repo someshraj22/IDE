@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href={{ url_for('static',filename='css/style.css') }}>
+</head>
+<body>
+    <nav class='navbar'>
+    <ul class='left'>
+        <li><a href='/save'>Submit Program</a></li>
+        <li><a href="/search">Search Program</a></li>
+    </ul>
+    <ul class='right'>
+        <li><a href='/ide'>Try IDE</a></li>
+    </ul>
+</nav>
+{% block contents %}
+{% endblock %}
+</body>
+
+</html>

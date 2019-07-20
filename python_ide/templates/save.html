@@ -1,0 +1,19 @@
+{% extends 'layout.html'%}
+{% block contents %}
+<form method="POST" name="save" class="ide">
+    <label for="problem">Problem Description
+        <textarea name='problem' wrap="off" class='problem'></textarea>
+    </label>
+    <label for="code">Write your code here..
+        <textarea name='code' wrap="off" class='code'></textarea>
+    </label>
+    <label for="tags">To Save Program, provide appropriate tags
+            <textarea name='tags' wrap="off" class="tags"></textarea>
+    </label>
+    <input type="submit" name="save" value="Save">
+    <br>
+    
+</form>
+
+
+{% endblock %}

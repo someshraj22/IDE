@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block contents %}
+<form method="POST" name="ide" class="searchbox">
+        <div class='searchbar'>
+        <!-- <textarea name='search_query' wrap="off" class='search'></textarea> -->
+        <input type="submit" name="search" value="Search" class="right">
+        <input type="text" name='search_query' placeholder="Search" class="right"> 
+        
+        </div>
+        
+</form>
+<div class='res'>
+{% for c in codes%}
+<div class='result'>
+    <div class='description'><h3>{{c.description}}</h3></div>
+    <br>
+    <div class='code_block'><pre>{{c.code}}</pre></div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
